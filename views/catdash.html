@@ -1,0 +1,47 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+ 
+
+
+
+<table class="table table-striped table-hover">
+    <tr>
+      <th>CAT ID</th>
+      <th>CAT Name</th>
+     
+      <th>Alteration</th>
+
+
+    </tr>      <th>CAT Name</th>
+     
+      <th>Alteration</th>
+
+
+    </tr>
+    {% for cat in cats %}
+  <tr>
+          <td> {{cat.catid}}</td>
+          <td>{{cat.catname}}</td>
+          <td>  <a href="cat/{{cat.id}}">Modify</a></td>
+  </tr>
+  {%endfor%}
+
+  </table>
+
+
+<br/>
+<a href="/">back</a>
+
+
+
+
+
+
+
+{% endblock %}

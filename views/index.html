@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+<h2>PRODUCT LIST</h2>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Productname</th>
+            <th>Price</th>
+            <th>Catid</th>
+           
+          </tr>
+        </thead>
+        
+       
+  
+                {% for product in products %}
+          <tr>
+            <td>{{product.productid}} </td>
+            <td>{{product.productname}}</td>
+            <td>{{product.productprice}}</td>
+          <td>  <a href="product/{{product.id}}">Modify</a></td>
+          </tr>
+          {%endfor%}
+
+
+        </tbody>
+      </table>
+    
+  <a href="/">Back</a>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+{% endblock %}
+
+
+

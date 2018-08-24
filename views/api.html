@@ -1,0 +1,36 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <br>
+
+    <form method="post" action="/api/productinfo" class="form-inline">
+      <div class="form-group">
+        <label>Product id</label>
+        <input type="text" name="productid" class="form-control" required>
+        <label>Product Name</label>
+        <input type="text" name="productname" class="form-control" required>
+        <label>Price </label>
+        <input type="text" name="productprice" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-default">Save</button>
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+<hr><br>
+
